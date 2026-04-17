@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Models
+models/*.pkl
+models/*.joblib
+
+# Data pesada opcional
+data/processed/
+data/raw/*.zip
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
