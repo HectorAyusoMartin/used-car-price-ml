@@ -26,3 +26,5 @@ data/raw/*.zip
 # OS
 .DS_Store
 Thumbs.db
+
+help.help
