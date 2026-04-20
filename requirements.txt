@@ -5,3 +5,5 @@ seaborn
 jupyter
 joblib
 streamlit
+xgboost
+catboost
