@@ -27,4 +27,4 @@ data/raw/*.zip
 .DS_Store
 Thumbs.db
 
-help.help
+anaconda_projects\db
