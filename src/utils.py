@@ -1,22 +1,25 @@
+from pathlib import Path
+import joblib
 
 
-def basic_data_check(df: pd.DataFrame)-> None:
+def ensure_directory(path: Path) -> None:
     """
-    Muestra una revisión básica del dataset.
+    Crea el folder, si no existe antes.
+    """
+    path.mkdir(parents=True,exist_ok=True)
+    return None
+
+def save_pickle(obj, filepath: Path) ->None:
+
+    """
+    Guarda un objeto en disco duro usando joblib
     
     """
+    joblib.dump(obj,filepath)
+    return None
 
-    print("\nPrimeras 5 filas:")
-    print(df.head())
-
-    print("\nForma del dataset:")
-    print(df.shape)
-
-    print("\nColumnas:")
-    print(df.columns.tolist())
-
-    print("\nTipo de datos:")
-    print(df.dtypes)
-
-    print("\nValores nulos por columna:")
-    print(df.isnull().sum())
+def load_pickle(filepath: Path):
+    """
+    Carga un objeto del disco con joblib
+    """
+    return joblib.laod(filepath)

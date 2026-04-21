@@ -7,11 +7,12 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
 from xgboost import XGBRegressor
 
-from src.config import TARGET_COLUMN, RANDOM_STATE, TEST_SIZE
+from src.config import TARGET_COLUMN, RANDOM_STATE, TEST_SIZE, MODEL_FILE, PREPROCESSOR_FILE, MODELS_DIR
 from src.data_loader import load_raw_data
 from src.features import extract_brand, create_car_age, create_km_per_year
 from src.preprocessing import group_rare_fuel_types, select_model_columns,split_features_target
 from src.evaluate import evaluate_regression
+from src.utils import ensure_directory, save_pickle
 
 #---------------------------------------------------------------------------------------------
 
@@ -91,6 +92,11 @@ def main():
     metrics = evaluate_regression(y_test, preds)
     print('Training completed.')
     print(metrics)
+
+    ensure_directory(MODELS_DIR)
+    save_pickle(model,MODEL_FILE)
+    save_pickle(preprocessor, PREPROCESSOR_FILE)
+    print("Artifacts saved successfully.")
     
 if __name__ == "__main__":
     main()

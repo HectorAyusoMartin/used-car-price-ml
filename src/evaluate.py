@@ -14,8 +14,8 @@ def evaluate_regression(y_true, y_pred):
 
     return {
 
-        "MAE" : mae,
-        "RMSE" : rmse,
-        "R2" : r2
+        "MAE" : float(mae),
+        "RMSE" : float(rmse),
+        "R2" : float(r2)
 
     }

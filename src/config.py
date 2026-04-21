@@ -9,10 +9,11 @@ RAW_DATA_DIR = DATA_DIR / "raw"
 PROCESSED_DATA_DIR = DATA_DIR / "processed"
 MODELS_DIR = BASE_DIR / "models"
 
+PREPROCESSOR_FILE = MODELS_DIR / "preprocessor.pkl"
+
 #Archivos
 RAW_DATA_FILE = RAW_DATA_DIR / "cars.csv"
-MODEL_FILE= MODELS_DIR / "xgb_used_car_model.pkl"
-
+MODEL_FILE = MODELS_DIR / "model.pkl"
 
 #Variable objetivo provisional:
 TARGET_COLUMN = "selling_price"
