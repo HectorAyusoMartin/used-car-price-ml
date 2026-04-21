@@ -31,7 +31,7 @@ def select_model_columns(df: pd.DataFrame)-> pd.DataFrame:
         "selling_price"
     ]
 
-    return df_copy[select_model_columns]
+    return df_copy[selected_columns]
 
 def split_features_target(df: pd.DataFrame, target_col:str) -> tuple[pd.DataFrame,pd.Series]:
     """
