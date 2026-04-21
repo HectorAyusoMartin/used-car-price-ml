@@ -6,12 +6,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #Carpetas
 DATA_DIR = BASE_DIR / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
-PROCESSED_DATA_DIR = BASE_DIR / "processed"
+PROCESSED_DATA_DIR = DATA_DIR / "processed"
 MODELS_DIR = BASE_DIR / "models"
 
 #Archivos
 RAW_DATA_FILE = RAW_DATA_DIR / "cars.csv"
+MODEL_FILE= MODELS_DIR / "xgb_used_car_model.pkl"
 
 
 #Variable objetivo provisional:
 TARGET_COLUMN = "selling_price"
+
+#Hiper-parámetros
+RANDOM_STATE = 7
+TEST_SIZE = 0.2
