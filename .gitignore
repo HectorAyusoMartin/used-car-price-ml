@@ -4,7 +4,7 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Virtual env
+# Virtual environments
 venv/
 env/
 .venv/
@@ -12,19 +12,17 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Models
-models/*.pkl
-models/*.joblib
+# Training / experiment logs
+catboost_info/
+**/catboost_info/
 
-# Data pesada opcional
-data/processed/
-data/raw/*.zip
+# Local tool metadata
+anaconda_projects/
+*.db
 
-# VS Code
+# IDE
 .vscode/
 
 # OS
 .DS_Store
 Thumbs.db
-
-anaconda_projects\db
