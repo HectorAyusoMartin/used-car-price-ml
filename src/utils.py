@@ -22,4 +22,4 @@ def load_pickle(filepath: Path):
     """
     Carga un objeto del disco con joblib
     """
-    return joblib.laod(filepath)
+    return joblib.load(filepath)

@@ -1,8 +1,8 @@
-from src.data_loader import load_raw_data, basic_data_check
+from src.data_loader import load_raw_data
 
 def main():
     df = load_raw_data()
-    basic_data_check(df)
+    
 
 
 if __name__ == "__main__":
