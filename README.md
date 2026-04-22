@@ -19,6 +19,15 @@ Linkedin: https://www.linkedin.com/in/hector-ayuso-martin/
 
 ---
 
+## Launch App
+
+What it does exactly:
+If .venv does not exist, it creates it.
+If it already exists, it does not modify it.
+It tries to import all the key libraries.
+If any are missing, it runs pip install -r requirements.txt.
+If they are already installed, it launches Streamlit app directly.
+
 ## Overview
 
 The objective of this project is to estimate second-hand vehicle prices using supervised regression models trained on structured automotive market data.
