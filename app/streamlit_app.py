@@ -13,6 +13,14 @@ st.set_page_config(
     layout="centered"
 )
 
+st.markdown("""
+<style>
+.stApp {
+    background-color: #556B5D;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("Second-Hand Vehicle Price Predictor")
 st.write("Estimate the selling price of a second-hand vehicle.")
 
